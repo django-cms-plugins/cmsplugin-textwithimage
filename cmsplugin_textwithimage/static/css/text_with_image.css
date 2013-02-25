@@ -1,0 +1,46 @@
+/* !cmsplugin_textwithimage */
+/* ---------------------------------------------------------------------- */
+
+.clear {
+    clear: both;
+}
+
+.txtimg-wrapper {
+    margin-bottom: 18px;
+}
+
+.txtimg-img-l {
+    float: left;
+    margin-right: 40px;
+    width: 220px;
+}
+
+.txtimg-txt-l {
+    float: left;
+    width: 736px;
+}
+
+.txtimg-img-r {
+    float: left;
+    width: 220px;
+}
+
+.txtimg-txt-r {
+    float: left;
+    margin-right: 40px;
+    width: 736px;
+}
+
+.txtimg-wrapper .border1 {
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 3px #333;
+}
+.txtimg-wrapper .border2 {
+    border: 5px solid #453B2C;
+    box-shadow: 0px 0px 3px #333;
+}
+
+.txtimg-wrapper .border3 {
+    border: 5px solid #698C1D;
+    box-shadow: 0px 0px 3px #333;
+}

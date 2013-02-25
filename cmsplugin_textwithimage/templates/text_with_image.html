@@ -1,0 +1,81 @@
+{% load i18n %}
+{% load thumbnail %}
+
+
+<h1>{{ instance.title }}</h1>
+
+
+{% if instance.image_position = 'left' %}
+    <div class="txtimg-wrapper">
+        <div class="txtimg-img-l">
+            {% if instance.image %}
+                {% thumbnail instance.image "220x220" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" {% if instance.image_border %}class="{{ instance.image_border }}" {% endif %}/>
+                {% endthumbnail %}
+            {% endif %}
+        </div>
+        <div class="txtimg-txt-l">
+            {% autoescape off %}
+            {{ instance.content }}
+            {% endautoescape %}
+        </div>
+        <div class="clear"></div>
+    </div>
+{% endif %}
+
+
+{% if instance.image_position = 'right' %}
+    <div class="txtimg-wrapper">
+        <div class="txtimg-txt-r">
+            {% autoescape off %}
+            {{ instance.content }}
+            {% endautoescape %}
+        </div>
+        <div class="txtimg-img-r">
+            {% if instance.image %}
+                {% thumbnail instance.image "220x220" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" {% if instance.image_border %}class="{{ instance.image_border }}" {% endif %}/>
+                {% endthumbnail %}
+            {% endif %}
+        </div>
+        <div class="clear"></div>
+    </div>
+{% endif %}
+
+
+{% if instance.image_position = 'bottom' %}
+    <div class="txtimg-wrapper">
+        <div class="txtimg-txt-b">
+            {% autoescape off %}
+            {{ instance.content }}
+            {% endautoescape %}
+        </div>
+        <div class="txtimg-img-b">
+            {% if instance.image %}
+                {% thumbnail instance.image "220x220" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" {% if instance.image_border %}class="{{ instance.image_border }}" {% endif %}/>
+                {% endthumbnail %}
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+
+{% if instance.image_position = 'top' %}
+    <div class="txtimg-wrapper">
+        <div class="txtimg-img-t">
+            {% if instance.image %}
+                {% thumbnail instance.image "220x220" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" {% if instance.image_border %}class="{{ instance.image_border }}" {% endif %}/>
+                {% endthumbnail %}
+            {% endif %}
+        </div>
+        <div class="txtimg-txt-t">
+            {% autoescape off %}
+            {{ instance.content }}
+            {% endautoescape %}
+        </div>
+    </div>
+{% endif %}
+
+
